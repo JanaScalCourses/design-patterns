@@ -1,10 +1,10 @@
 import gui.Button;
 import gui.Dialog;
-import gui.WindownsDialog;
+import gui.WebDialog;
 
 class Main {
     public static void main(String[] args) {
-        Dialog dialog = new WindownsDialog();
+        Dialog dialog = new WebDialog();
         dialog.render();
         Button b = dialog.createButton();
         b.onClick();
