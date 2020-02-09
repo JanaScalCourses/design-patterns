@@ -7,8 +7,19 @@ For the `Factory` example I'll use the [reffactoring.guru](https://refactoring.g
 
 ![](./example.png)
 
-- A superclass `Dialog` handle objects using `Button` interface.
-  - The `WindownsDialog` subclass handle a concrete button: `WindownsButton`
-  - The `WebDialog` subclass handle a concrete button: `WebButton`
-- The Main program only handle the `Dialog` and `Button` class
+- A superclass `Dialog` handle objects using `Button` interface, and creates `DefaultButton`.
+  - The `WindownsDialog` subclass creates a concrete button: `WindownsButton`
+  - The `WebDialog` subclass creates a concrete button: `HTMLButton`
+- The Main program only handle a `Dialog` and `Button` interfaces.
 
+# Run the example
+To run the example, you need have the jdk to compile the code, consult the [installation instructions](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html).  
+
+After that, you need to compile the code:
+```
+javac Main.java
+```
+And then, run it:
+```
+java Main
+```
