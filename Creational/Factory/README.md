@@ -3,7 +3,9 @@
  
 # Example
 For the `Factory` example I'll use the [reffactoring.guru](https://refactoring.guru/design-patterns/factory-method) example:  
-Create a cross-platform UI elements without coupling the client code to concrete UI classes.  
+> Create a cross-platform UI elements without coupling the client code to concrete UI classes.  
+
+![](./example.png)
 
 - A superclass `Dialog` handle objects using `Button` interface.
   - The `WindownsDialog` subclass handle a concrete button: `WindownsButton`
