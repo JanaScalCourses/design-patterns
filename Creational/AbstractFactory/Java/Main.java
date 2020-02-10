@@ -1,18 +1,22 @@
 import GUI.Button;
+import GUI.Checkbox;
 import GUI.GUIFactory;
 import GUI.WebGUI.WebGUIFactory;
 import GUI.WindownsGUI.WinGUIFactory;
 
 class Main {
-  public static void main(final String[] args) {
-    GUIFactory factory = new WebGUIFactory();
+  private static void test(GUIFactory factory) {
     Button button = factory.createButton();
     button.render();
-    button.onClick();
+    Checkbox checkbox = factory.createCheckbox();
+    checkbox.render();
 
+  }
+
+  public static void main(final String[] args) {
+    GUIFactory factory = new WebGUIFactory();
+    test(factory);
     factory = new WinGUIFactory();
-    button = factory.createButton();
-    button.render();
-    button.onClick();
+    test(factory);
   }
 }
