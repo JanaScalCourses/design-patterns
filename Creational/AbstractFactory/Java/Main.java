@@ -1,8 +1,8 @@
 import GUI.Button;
 import GUI.Checkbox;
 import GUI.GUIFactory;
+import GUI.MacGUI.MacGUIFactory;
 import GUI.WebGUI.WebGUIFactory;
-import GUI.WindownsGUI.WinGUIFactory;
 
 class Main {
   private static void test(GUIFactory factory) {
@@ -16,7 +16,7 @@ class Main {
   public static void main(final String[] args) {
     GUIFactory factory = new WebGUIFactory();
     test(factory);
-    factory = new WinGUIFactory();
+    factory = new MacGUIFactory();
     test(factory);
   }
 }
