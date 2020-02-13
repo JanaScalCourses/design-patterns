@@ -1,10 +1,16 @@
 package account;
-public class Builder{
+
+public class Builder implements bank.newAccountBuilder {
     private Account account;
 
-    public Builder(Long accountNumber) {
-        account = new Account();
+    public Builder()  {
+        account = new Account();;
+    }
+
+    @Override
+    public Builder withAccountNumber(Long accountNumber) {
         account.setAccountNumber(accountNumber);
+        return this;
     }
 
     public Builder withOwner(String owner) {
