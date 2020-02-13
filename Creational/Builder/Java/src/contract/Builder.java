@@ -6,10 +6,9 @@ public class Builder implements NewAccountBuilder {
     private Contract contract;
 
     public Builder()  {
-        contract = new Contract();;
+        contract = new Contract();
     }
 
-    @Override
     public Builder withAccountNumber(Long accountNumber) {
         contract.setAccountNumber(accountNumber);
         return this;
@@ -39,5 +38,10 @@ public class Builder implements NewAccountBuilder {
         if(contract.getBranch() != null && !contract.getBranch().isEmpty())
             return contract;
         else return null;
+    }
+
+    public NewAccountBuilder reset() {
+        contract = new Contract();
+        return this;
     }
 }

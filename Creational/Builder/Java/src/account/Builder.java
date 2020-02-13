@@ -5,11 +5,10 @@ import bank.NewAccountBuilder;
 public class Builder implements NewAccountBuilder {
     private Account account;
 
-    public Builder()  {
-        account = new Account();;
+    public Builder() {
+        account = new Account();
     }
 
-    @Override
     public Builder withAccountNumber(Long accountNumber) {
         account.setAccountNumber(accountNumber);
         return this;
@@ -35,9 +34,14 @@ public class Builder implements NewAccountBuilder {
         return this;
     }
 
-    public Account build(){
-        if(account.getBranch() != null && !account.getBranch().isEmpty())
+    public Account build() {
+        if (account.getBranch() != null && !account.getBranch().isEmpty())
             return account;
         else return null;
+    }
+
+    public NewAccountBuilder reset() {
+        account = new Account();
+        return this;
     }
 }
