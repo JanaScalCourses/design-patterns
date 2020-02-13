@@ -1,43 +1,43 @@
-package account;
+package contract;
 
 import bank.NewAccountBuilder;
 
 public class Builder implements NewAccountBuilder {
-    private Account account;
+    private Contract contract;
 
     public Builder()  {
-        account = new Account();;
+        contract = new Contract();;
     }
 
     @Override
     public Builder withAccountNumber(Long accountNumber) {
-        account.setAccountNumber(accountNumber);
+        contract.setAccountNumber(accountNumber);
         return this;
     }
 
     public Builder withOwner(String owner) {
-        account.setOwner(owner);
+        contract.setOwner(owner);
         return this;
     }
 
     public Builder atBranch(String branch) {
-        account.setBranch(branch);
+        contract.setBranch(branch);
         return this;
     }
 
     public Builder openingBalance(Double balance) {
-        account.setBalance(balance);
+        contract.setBalance(balance);
         return this;
     }
 
     public Builder availableCredit(Double credit) {
-        account.setCredit(credit);
+        contract.setCredit(credit);
         return this;
     }
 
-    public Account build(){
-        if(account.getBranch() != null && !account.getBranch().isEmpty())
-            return account;
+    public Contract build(){
+        if(contract.getBranch() != null && !contract.getBranch().isEmpty())
+            return contract;
         else return null;
     }
 }

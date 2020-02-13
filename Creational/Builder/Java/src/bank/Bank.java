@@ -1,17 +1,28 @@
 package bank;
 
 import account.Account;
-import account.Builder;
+import contract.Contract;
+
 class Bank{
 
     public static void main(String[] args){
-        Builder b = new Builder()
+        account.Builder accountBuilder = new account.Builder()
                 .withAccountNumber(12L)
                 .withOwner("Jana")
                 .openingBalance(100.0)
                 .availableCredit(.50)
                 .atBranch("Serra");
-        Account a = b.build();
+        Account a = accountBuilder.build();
         System.out.println(a);
+        contract.Builder contractBuilder = new contract.Builder()
+                .withAccountNumber(12L)
+                .withOwner("Jana")
+                .openingBalance(100.0)
+                .availableCredit(.50)
+                .atBranch("Serra");
+        Contract c = contractBuilder.build();
+        System.out.println(c);
+
+
     }
 }
