@@ -6,23 +6,20 @@ import contract.Contract;
 class Bank{
 
     public static void main(String[] args){
-        account.Builder accountBuilder = new account.Builder()
-                .withAccountNumber(12L)
-                .withOwner("Jana")
-                .openingBalance(100.0)
-                .availableCredit(.50)
-                .atBranch("Serra");
+        NewAccountDirector director = new NewAccountDirector("Serra");
+        contract.Builder contractBuilder = new contract.Builder();
+        account.Builder accountBuilder = new account.Builder();
+
+        director.createNewAccount("Janaina", accountBuilder, contractBuilder);
         Account a = accountBuilder.build();
-        System.out.println(a);
-        contract.Builder contractBuilder = new contract.Builder()
-                .withAccountNumber(12L)
-                .withOwner("Jana")
-                .openingBalance(100.0)
-                .availableCredit(.50)
-                .atBranch("Serra");
         Contract c = contractBuilder.build();
+        System.out.println(a);
         System.out.println(c);
 
-
+        director.createNewPremiumAccount("Isaac", accountBuilder, contractBuilder);
+        a = accountBuilder.build();
+        c = contractBuilder.build();
+        System.out.println(a);
+        System.out.println(c);
     }
 }
