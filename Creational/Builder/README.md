@@ -19,11 +19,11 @@ The resulting structure:
 # Run the example
 To run the example, you need have the jdk to compile the code, consult the [installation instructions](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html).  
 
-After that, you need to compile the code:
+After that, you need to compile the code, enter `src` folder:
 ```
-javac Main.java
+javac bank/Bank.java
 ```
 And then, run it:
 ```
-java Main
+java bank.Bank
 ```
