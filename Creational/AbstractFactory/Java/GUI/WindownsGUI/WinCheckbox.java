@@ -2,7 +2,7 @@ package GUI.WindownsGUI;
 
 import GUI.Checkbox;
 
-public class WinCheckbox implements Checkbox{
+public class WinCheckbox implements Checkbox {
 
     @Override
     public void render() {

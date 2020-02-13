@@ -5,7 +5,7 @@ Typically, this separation into a new class would happen when the concern with o
 For this example I'll extend the [Factory](/Creational/Factory/README.md) example, using the structure below:
 ![](structure.png)
 
-- An abstract superclass `GUIFactory` use `Button` and `CheckBox` interfaces.
+- An abstract superclass `GUIFactory` uses `Button` and `CheckBox` interfaces.
   - The `WindownsGUIFactory` subclass creates concrete objects: `WindownsButton` and `WindownsCheckbox`
   - The `WebDialog` subclass creates concrete objects: `HTMLButton` and `HTMLCheckbox`
 - The Main program only handle `GUIFactory`, `Button` and `CheckBox` interfaces.

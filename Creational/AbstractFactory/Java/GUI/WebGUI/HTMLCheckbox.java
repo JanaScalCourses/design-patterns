@@ -2,7 +2,7 @@ package GUI.WebGUI;
 
 import GUI.Checkbox;
 
-public class HTMLCheckbox implements Checkbox{
+public class HTMLCheckbox implements Checkbox {
 
     @Override
     public void render() {
