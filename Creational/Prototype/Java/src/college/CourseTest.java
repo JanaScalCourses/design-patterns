@@ -44,7 +44,7 @@ public class CourseTest implements Cloneable {
 
   @Override
   public String toString() {
-    return String.format("%s - %s - %s \n\t%s\n\t%s", studentName, date, course.getName(), questions, answers);
+    return String.format("%s - %s - %s", studentName, date, course.getName());
   }
 
   @Override

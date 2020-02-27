@@ -29,6 +29,16 @@ public class Student {
 
   @Override
   public String toString() {
-    return String.format("%s\n%s", name, courses);
+    return name;
+  }
+
+  public void showDetails() {
+    System.out.println("Student: " + name);
+    courses.forEach((course, tests) -> {
+      System.out.println("\tCourse: " + course);
+      for (CourseTest test : tests) {
+        System.out.println("\t\t" + test);
+      }
+    });
   }
 }
