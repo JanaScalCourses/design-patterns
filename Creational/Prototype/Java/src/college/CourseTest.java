@@ -20,12 +20,28 @@ public class CourseTest implements Cloneable {
     this.answers = clone.questions;
   }
 
+  public void setCourse(Course course) {
+    this.course = course;
+  }
+
   public void setAnswers(String answers) {
     this.answers = answers;
   }
 
   public void setDate(String date) {
     this.date = date;
+  }
+
+  public void setStudentName(String studentName) {
+    this.studentName = studentName;
+  }
+
+  public void setQuestions(String questions) {
+    this.questions = questions;
+  }
+
+  public String getQuestions() {
+    return questions;
   }
 
   public Course getCourse() {

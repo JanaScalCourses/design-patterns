@@ -30,6 +30,26 @@ public class Course {
     return name + " " + semester.toString();
   }
 
+  public List<CourseTest> getTests() {
+    return tests;
+  }
+
+  public Semester getSemester() {
+    return semester;
+  }
+
+  public String getProfessor() {
+    return professor;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setSemester(Semester semester) {
+    this.semester = semester;
+  }
+
   public void setProfessor(String professor) {
     this.professor = professor;
   }
@@ -53,6 +73,4 @@ public class Course {
     tests.add(test);
     return test;
   }
-
-
 }

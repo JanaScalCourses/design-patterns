@@ -9,6 +9,14 @@ public class Semester {
     this.semester = semester;
   }
 
+  public Integer getYear() {
+    return year;
+  }
+
+  public Integer getSemester() {
+    return semester;
+  }
+
   static Semester create(Integer year, Integer semester) {
     if (year < 1900 || year > 2100)
       throw new RuntimeException("year out of range");

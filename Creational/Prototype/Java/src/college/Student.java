@@ -14,6 +14,20 @@ public class Student {
     this.name = name;
   }
 
+  public List<Course> getCourses() {
+    return new ArrayList<>(courses.keySet());
+  }
+
+  public List<CourseTest> getTestsBy(Course course) {
+    return courses.get(course);
+  }
+
+  public List<CourseTest> getAllTests() {
+    List<CourseTest> list = new ArrayList<>();
+    courses.forEach((course, courseTests) -> list.addAll(courseTests));
+    return list;
+  }
+
   public String getName() {
     return name;
   }
