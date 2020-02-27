@@ -3,7 +3,7 @@ package college;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Course {
+public class Course implements Cloneable {
   private List<CourseTest> tests = new ArrayList<>();
   private String name;
   private Semester semester;
@@ -72,5 +72,10 @@ public class Course {
     CourseTest test = new CourseTest(this, questions);
     tests.add(test);
     return test;
+  }
+
+  @Override
+  protected Course clone() throws CloneNotSupportedException {
+    return (Course) super.clone();
   }
 }

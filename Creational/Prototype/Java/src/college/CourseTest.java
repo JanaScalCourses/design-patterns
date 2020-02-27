@@ -12,14 +12,6 @@ public class CourseTest implements Cloneable {
     this.questions = questions;
   }
 
-  public CourseTest(CourseTest clone) {
-    this.studentName = clone.studentName;
-    this.course = clone.course;
-    this.date = clone.date;
-    this.questions = clone.questions;
-    this.answers = clone.questions;
-  }
-
   public void setCourse(Course course) {
     this.course = course;
   }
@@ -65,7 +57,6 @@ public class CourseTest implements Cloneable {
 
   @Override
   public CourseTest clone() throws CloneNotSupportedException {
-    super.clone();
-    return new CourseTest(this);
+    return (CourseTest) super.clone();
   }
 }
