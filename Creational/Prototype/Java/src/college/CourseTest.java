@@ -12,8 +12,9 @@ public class CourseTest implements Cloneable {
     this.questions = questions;
   }
 
-  public void setCourse(Course course) {
+  public CourseTest setCourse(Course course) {
     this.course = course;
+    return this;
   }
 
   public void setAnswers(String answers) {

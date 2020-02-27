@@ -3,14 +3,18 @@ package college;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Course implements Cloneable {
-  private List<CourseTest> tests = new ArrayList<>();
+public abstract class Course implements Cloneable {
+  protected List<CourseTest> tests = new ArrayList<>();
   private String name;
   private Semester semester;
   private String professor;
-  private List<Student> students = new ArrayList<>();
+  protected List<Student> students = new ArrayList<>();
 
-  public Course(String name, Semester semester, String professor) {
+  public abstract void attend(int lessonIndex, Student student);
+
+  public abstract boolean wasAttendedBy(int lessonIndex, Student student);
+
+  protected Course(String name, Semester semester, String professor) {
     this.name = name;
     this.semester = semester;
     this.professor = professor;
@@ -77,5 +81,22 @@ public class Course implements Cloneable {
   @Override
   protected Course clone() throws CloneNotSupportedException {
     return (Course) super.clone();
+  }
+
+  public Course newSemester() throws CloneNotSupportedException {
+    Course clone = this.clone();
+    clone.setSemester(this.getSemester().next());
+    clone.students = new ArrayList<>();
+    clone.tests = new ArrayList<>();
+    for (CourseTest test : this.getTests()) {
+      clone.getTests().add(test.clone().setCourse(clone));
+    }
+    return clone;
+  }
+
+  public void showDetails() {
+    System.out.println(this.toString());
+    System.out.println("Students: " + students);
+    System.out.println("Tests: " + tests);
   }
 }

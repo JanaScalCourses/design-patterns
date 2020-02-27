@@ -25,7 +25,7 @@ public class Semester {
     return new Semester(year, semester);
   }
 
-  Semester next() {
+  public Semester next() {
     if (semester == 2)
       return new Semester(year + 1, 1);
     else
