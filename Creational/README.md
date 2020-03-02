@@ -5,4 +5,4 @@ These patterns describe mechanisms for creating objects respecting the OPEN/CLOS
 - [Abstract Factory](./AbstractFactory)
 - Builder
 - Prototype
-- Singleton
+- [Singleton](./Singleton)
