@@ -1,0 +1,27 @@
+@startuml
+class Bank
+class Director{
++make()
+}
+interface Builder {
++Builder(accountNumber)
++reset()
++withOwner()
++atBranch()
++openingBalance()
++grantCredit()
++getProduct()
+}
+class AccountBuilder
+class Account
+class ContractBuilder
+class Contract
+Director o--> Builder
+Builder <|.. AccountBuilder
+AccountBuilder --> Account
+Builder <|.. ContractBuilder
+ContractBuilder --> Contract
+Bank --> AccountBuilder
+Bank --> ContractBuilder
+Bank --> Director
+@enduml
