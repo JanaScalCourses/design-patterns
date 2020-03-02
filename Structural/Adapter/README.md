@@ -27,6 +27,10 @@ For this exercise I'll use the example that the
 The figure below illustrate the solution using an xml to json adapter. 
 ![xml to json example](example.png)
 
+Although the figure shows a customer interface, my solution does not contain it. 
+I decided that this interface was not necessary in such a simple example. 
+Still, my solution is an Adapter Pattern implementation.
+
 # How to run it
 
 To run the example, you need have the jdk to compile the code, consult the 
