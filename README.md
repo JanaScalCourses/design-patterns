@@ -5,6 +5,6 @@ I intend to recreate the design patterns described in the book ["Dive into Desig
 
 # The project structure
 I follow the Shvets book structure that devides the designs in:
- - Creational
+ - [Creational](/Creational)
  - Structural
  - Behavioral
