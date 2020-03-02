@@ -1,6 +1,7 @@
 import adapters.JsonLibraryXMLAdapter;
 import data.JSON;
 import data.XML;
+import entities.CoreClasses;
 import entities.JsonLibrary;
 
 public class Main {
@@ -10,9 +11,10 @@ public class Main {
     XML xmlData = new XML("XML");
 
     JsonLibrary library = new JsonLibrary();
-    library.consumeData(jsonData);
-
     JsonLibraryXMLAdapter libraryAdapter = new JsonLibraryXMLAdapter(library);
-    libraryAdapter.consumeData(xmlData);
+
+    CoreClasses coreClasses = new CoreClasses(libraryAdapter);
+
+    coreClasses.processData(xmlData);
   }
 }
