@@ -1,6 +1,6 @@
 package example;
 
-public class Notifier {
+public class Notifier implements NotifierInterface {
 
   private static Notifier instance = new Notifier();
 

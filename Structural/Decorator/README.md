@@ -1,12 +1,11 @@
 # The pattern
 
 Decorator is a structural design pattern that extends the functionality of an interface by calling that interface, 
-through a component with the same interface, and adding more to it. 
+by adding more *actions* to an interface, through a component with the same interface. 
 
 Since the decorator implements the same interface of its component, 
-a decorator can be the component for another decorator.   
-To allow this, a base decorator, composed by a base component which does not call the method again, 
-needs to exist, as shown in the image below. 
+a decorator can be the component for another decorator. 
+Thus creating a linked list, in a way that calls the same method in each decorator until reaching the base component.
 
 ![structure](structure.png)  
 *Font: Dive into Design Patterns*
@@ -29,6 +28,11 @@ The image below represents the solution proposed.
 ![example](example.png)
 *Font: Dive into Design Patterns*
 
+By definition, a Decorator needs a concrete component that will always be called.
+In this example that component is the Notifier (sends email), so the client will always receive a email.
+Although it seems strange that the customer is unable to disable its email, this can be a domain decision, 
+so this example remains accurate.
+ 
 # Run the example
 
 This project was build using [Maven](http://maven.apache.org/), and to run it you need to get Maven via apt-get install 

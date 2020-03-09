@@ -16,4 +16,13 @@ public class AppTest
         assertEquals(expected, notifier.send(message));
     }
 
+    public void testMultipleNotifiers() {
+        NotifierInterface multipleNotifier = new FacebookNotifier(notifier);
+        multipleNotifier = new SlackNotifier(multipleNotifier);
+        multipleNotifier = new SmsNotifier(multipleNotifier);
+
+        String expected = String.format("Notifier says: %s", message);
+        assertEquals(expected, multipleNotifier.send(message));
+
+    }
 }
